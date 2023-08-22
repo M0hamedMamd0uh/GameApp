@@ -1,0 +1,222 @@
+body {
+  background-color: #272b30;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #222;
+}
+
+/* Start Games Section  */
+
+.games .header img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.games .navbar {
+  background-color: #3a497b !important;
+  border-radius: 5px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.games .navbar .navbar-toggler {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+.games .navbar .navbar-toggler i {
+  color: #fff;
+}
+.games .navbar .logo-img {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.games .navbar .navbar-brand {
+  color: #fff;
+  font-weight: 500;
+}
+.games .navbar .nav-item a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+.games .navbar .nav-item a.active {
+  color: #09c;
+}
+
+.games .games-details .box {
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #515151;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.games .games-details .box img {
+  border-radius: 5px;
+  /* filter: grayscale(1); */
+  transition: 0.5s;
+}
+
+.games .games-details .box {
+  transition: 0.5s;
+}
+.games .games-details .box:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .games .games-details .box:hover {
+    transform: scale(1.03);
+  }
+}
+
+/* .games .games-details .box:hover img {
+  filter: grayscale(0.1);
+} */
+.games .games-details .box .data > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.games .games-details .box .data > div:first-of-type span {
+  background-color: #0d6dfd84;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.games .games-details .box .data:hover > div:first-of-type span {
+  background-color: #0d6efd;
+}
+
+.games .games-details .box .data p {
+  text-align: center;
+  padding: 10px 0;
+  color: #ccc;
+  line-height: 1.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.games .games-details .box .data .game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 10px;
+  gap: 15px;
+}
+
+.games .games-details .box .data .game-footer::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 20px);
+  left: -10px;
+  top: 0;
+  height: 1px;
+  background-color: #515151;
+}
+
+.games .games-details .box .data .game-footer span {
+  background-color: #6b6b6b;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+/* End Games Section  */
+
+/* Start Details  */
+.details {
+  color: #fff;
+}
+
+.details .info h4 span:nth-child(2) {
+  margin-left: -2px;
+}
+.details .info h4 span:first-child,
+.details .info h6 span:first-child {
+  display: inline-block;
+  width: 80px;
+}
+
+.details .info h4 span:last-child,
+.details .info h6 span:last-child {
+  margin-left: 10px;
+}
+.details .info p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.details button a {
+  color: #fff;
+  text-decoration: none;
+}
+/* End Details  */
+
+/* Start Spinner  */
+.loading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #272b30b1;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* End Spinner  */
